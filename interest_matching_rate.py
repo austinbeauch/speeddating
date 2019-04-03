@@ -13,7 +13,7 @@ def main():
     #  'reading', 'tv', 'theater', 'movies', 'concerts', 'music', 'shopping', 'yoga']
     # 17 interests
     fields = ['wave', 'iid', 'pid', 'match', 'gaming', 'round']
-    data = pd.read_csv("Speed Dating Data.csv", encoding="windows-1252", skipinitialspace=True, usecols=fields)
+    data = pd.read_csv("data/Speed-Dating-Data.csv", encoding="windows-1252", skipinitialspace=True, usecols=fields)
 
     data_value = data.values
     # print(data)
