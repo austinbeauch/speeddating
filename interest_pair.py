@@ -8,9 +8,9 @@ def main():
                 'reading', 'tv', 'theater', 'movies', 'concerts', 'music', 'shopping', 'yoga']
     pairs = ['iid', 'pid']
 
-    data = pd.read_csv("Speed Dating Data.csv", encoding="windows-1252", skipinitialspace=True, usecols=fields)
-    interest_data = pd.read_csv("Speed Dating Data.csv", encoding="windows-1252", skipinitialspace=True, usecols=interest)
-    pairs_data = pd.read_csv("Speed Dating Data.csv", encoding="windows-1252", skipinitialspace=True, usecols=pairs)
+    data = pd.read_csv("data/Speed-Dating-Data.csv", encoding="windows-1252", skipinitialspace=True, usecols=fields)
+    interest_data = pd.read_csv("data/Speed-Dating-Data.csv", encoding="windows-1252", skipinitialspace=True, usecols=interest)
+    pairs_data = pd.read_csv("data/Speed-Dating-Data.csv", encoding="windows-1252", skipinitialspace=True, usecols=pairs)
 
     data_value = data.values
     interest_value = interest_data.values
