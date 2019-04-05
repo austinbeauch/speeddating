@@ -5,6 +5,10 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 from sklearn import datasets, linear_model
 
+# This code is calculating the matching rate base on how much do the participant rate for specific interest
+# It can be rate from 1 to 10; 1 is less interest and 10 is most interest
+# There are 17 interests can be rated; therefore, there are 17 graphs output
+# All the output graphs have been saved in the folder "interest_matching_rate_output"
 
 def main():
     # You can switch "gaming" to any other interest to calculate the matching rate
@@ -81,7 +85,8 @@ def main():
             match_result[cur_exercise] = value
 
     match_result = np.dot(match_result, 100)
-    print(match_result)
+    # print(match_result)
+    print("The graph have been created.")
 
     # draw the ouput (diagram)
     rating = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
@@ -92,14 +97,9 @@ def main():
     plt.xlabel('interest of gaming (rate from 1-10)')
     plt.ylabel('matching rate (%)')
     plt.show()
-    # plt.savefig("gaming.png")
 
-    # build the regression model
-    # rating = rating.reshape(len(rating), 1)
-    # match_result = match_result.reshape(len(match_result), 1)
-    # regr = linear_model.LinearRegression()
-    # regr.fit(rating, match_result)
-    # plt.plot(rating, regr.predict(match_result), color='red', linewidth=3)
+    # output the png file
+    # plt.savefig("gaming.png")
 
 
 if __name__ == "__main__":

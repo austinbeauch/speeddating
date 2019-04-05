@@ -2,6 +2,12 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics import jaccard_similarity_score
 
+# This code calculate two people's similarity base on only their intersets
+# by using jaccard similarity to predict the matching result
+# If the jaccard similarity > 0.5, we assume it is a match
+# After calculating the prdict model, it will compare to the real matching result
+# to check how accurate the model is
+
 def main():
     fields = ['iid','wave', 'round', 'pid', 'match']
     interest = ['sports', 'tvsports', 'exercise', 'dining', 'museums', 'art', 'hiking', 'gaming', 'clubbing',
@@ -68,9 +74,10 @@ def main():
         else:
             pred_matches[i] = 0
 
+    # comparing the accuracy to the real matching result
     J_sim_matches = jaccard_similarity_score(pred_matches, match_values)
     # print(total_data_amount)
-    print(J_sim_matches * 100)
+    print("The Jaccard Similarity model is", round(J_sim_matches * 100), "% accurate.")
 
 
 if __name__ == "__main__":
