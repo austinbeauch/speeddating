@@ -1,7 +1,7 @@
 import numpy as np
 from keras.models import load_model
 
-model = load_model('input_model.h5')
+model = load_model('models/input_model.h5')
 knockdown = np.array([0.89806022, 1.06741549, 0.98790808, 1.26951799, 0.75705166])
 
 print("\nOn a scale of 1-10")

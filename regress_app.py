@@ -2,8 +2,8 @@ import numpy as np
 
 # Used for in class presentation
 # Because only dependency we wanted was numpy, 
-#   hard coded in the knockdown, intercept and 
-#   the coefficients of the model
+#  hard coded in the knockdown, intercept and 
+#  the coefficients of the model
 
 knockdown = np.array([0.89806022, 1.06741549, 0.98790808, 1.26951799, 0.75705166])
 coef = [ 0.09785641, -0.01414224,  0.00640126,  0.0572765,  -0.01495719]
