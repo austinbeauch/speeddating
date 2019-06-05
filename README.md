@@ -9,4 +9,4 @@ We have two models, one trained from an artificial neural net (see notebookes/AN
 Running the ANN model requires Keras and can be tested with nn_app.py.
 The linear regression model only requires Numpy and can be tested with regress_app.py.
 
-The short report detailing our methods can be found within the report/ folder.
+The short report (three page limit with minimal graphs as per assignment description) detailing our methods can be found within the report/ folder.
